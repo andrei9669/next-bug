@@ -1,4 +1,12 @@
+import Link from 'next/link'
+
 /** Add your relevant code here for the issue to reproduce */
 export default function Home() {
-  return null
+    return (
+        <Link legacyBehavior passHref href="www.link.com">
+            <a>
+                <div dangerouslySetInnerHTML={{__html: "<a>anchor</a>"}}/>
+             </a>
+        </Link>
+    )
 }
